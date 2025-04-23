@@ -15,7 +15,7 @@ def add(a: int, b: int) -> int:
     Raises:
         TypeError: If either input is not an integer.
     """
-    if not isinstance(a, int) and not isinstance(b, int):
+    if not isinstance(a, int) or not isinstance(b, int):
         raise TypeError('The input should be number')
 
     result = a + b
