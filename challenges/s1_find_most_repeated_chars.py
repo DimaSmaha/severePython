@@ -1,8 +1,14 @@
 somestr = 'I love New York'
 
 
-def most_repeated_character(str: str) -> str:
-    somestr = list(str.replace(' ', '').lower())
+def most_repeated_character(sentance: str) -> str:
+    if not isinstance(sentance, str):
+        raise TypeError('Input should be string')
+
+    if sentance == '':
+        raise ValueError('Input should not be empty')
+
+    somestr = list(sentance.replace(' ', '').lower())
     somestr.sort()
     to_set = set(somestr)
 
