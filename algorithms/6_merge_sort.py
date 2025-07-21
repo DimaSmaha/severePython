@@ -2,7 +2,7 @@
 # Implement a merge sort with recursion
 
 
-items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53, 3]
 
 
 def mergesort(dataset):
@@ -13,7 +13,7 @@ def mergesort(dataset):
     # return sorted
     # merge arrays until you come beack to init lengs
 
-    if len(dataset) <= 1:
+    if len(dataset) == 1:
         return dataset
 
     dividedLen = len(dataset) // 2  # always returns integer without remainer
@@ -43,6 +43,7 @@ def mergesort(dataset):
         # Stuff I missed
         resultArr.extend(left[leftId:])
         resultArr.extend(right[rightId:])
+        #
         return resultArr
 
     return merge(leftPart, rightPart)
