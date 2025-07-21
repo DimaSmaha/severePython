@@ -33,21 +33,21 @@ def mergesort(dataset):
         rightId = 0
 
         while leftId < len(left) and rightId < len(right):
-            if left[leftId] > right[rightId]:
+            if left[leftId] < right[rightId]:
                 resultArr.append(left[leftId])
                 leftId += 1
             else:
                 resultArr.append(right[rightId])
                 rightId += 1
 
-        print(resultArr)
+        # Stuff I missed
+        resultArr.extend(left[leftId:])
+        resultArr.extend(right[rightId:])
         return resultArr
 
-    dataset = merge(leftPart, rightPart)
-    print(dataset)
-    return dataset
+    return merge(leftPart, rightPart)
 
 
 print(items)
-mergesort(items)
+items = mergesort(items)
 print(items)
