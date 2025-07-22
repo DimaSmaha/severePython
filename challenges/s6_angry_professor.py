@@ -27,3 +27,20 @@ print(angry_professor(2, [-5, 2, 5, 6]))  # YES
 print(angry_professor(3, [-5, -4, 0, 1, 2]))  # NO
 print(angry_professor(5, [-5, -4, -3, -2, 0, 1, 2]))  # NO
 print(angry_professor(5, [-5, -4, -3, -2, 1, 1, 2]))  # YES
+
+
+"""
+def filter_return_in_time_students(number):
+    if (number <= 0):
+        return number
+
+        Because filter() uses the truthiness of the functions return value.
+
+In Python:
+
+filter() keeps elements where the function returns a truthy value
+
+0 is falsy, so it's excluded
+
+So even though you returned 0, it gets treated as False.
+"""
