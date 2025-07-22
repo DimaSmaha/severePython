@@ -9,6 +9,9 @@ attendees, determine if the class is cancelled."""
 def angry_professor(thresholdToCancel: int, studentsCome: list[int]):
     def filter_return_in_time_students(number):
         return number <= 0
+    # for python style
+    # result = len([x for x in student_timing if x <= 0])
+    # return "NO" if result >= threshhold else "YES"
 
     in_time_students = list(
         filter(filter_return_in_time_students, studentsCome))
